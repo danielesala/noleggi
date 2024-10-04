@@ -13,6 +13,14 @@ public class Videogioco extends BaseEntity{
 		this.dataInizio = dataInizio;
 		this.dataFine = dataFine;
 	}
+	
+	public Console getConsole() {
+		return console;
+	}
+	
+	public void setConsole(Console console) {
+		this.console = console;
+	}
 
 	@Override
 	public double getPrezzo() {
