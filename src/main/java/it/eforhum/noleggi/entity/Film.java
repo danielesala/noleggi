@@ -1,15 +1,23 @@
 package it.eforhum.noleggi.entity;
 
 import java.time.LocalDate;
+import java.time.temporal.TemporalAmount;
 
 public class Film extends BaseEntity{
-	Genere genere;
+	private Genere genere;
+
+	public Genere getGenere() {
+		return genere;
+	}
+
+	public void setGenere(Genere genere) {
+		this.genere = genere;
+	}
 
 	@Override
 	public double getPrezzo() {
-		
-//		film - 2.5 * numero di giorni calcolati come differenza tra la data fine e la data inizio
-		return 2.5*
+		long giorni = super.dataFine.toEpochDay() - super.dataInizio.toEpochDay();
+		return 2.5 * giorni;
 	}
 	
 }
