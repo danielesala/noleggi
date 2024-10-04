@@ -27,13 +27,13 @@ public class VideogiocoRamDao implements VideogiocoDao{
 	}
 	
 	@Override
-	public boolean save(Videogioco newVideogioco) {
+	public void save(Videogioco newVideogioco) {
 		if(map.containsValue(newVideogioco)) {
 			log.warn("Failed:gioco già presente");
-			return false;//gioco già presente
+			throw new RuntimeException("noleggio già presente");
 		}
 		map.put(newVideogioco.getId(), newVideogioco);
-		return true;
+		log.info("Videogioco "+newVideogioco+" aggiunto");
 	}
 
 	@Override
@@ -48,14 +48,13 @@ public class VideogiocoRamDao implements VideogiocoDao{
 	}
 
 	@Override
-	public boolean update(int id, Videogioco videogioco) {
+	public void update(int id, Videogioco videogioco) {
 		if(findById(id).isEmpty()) {//key not present
 			log.warn("Failed:Key non presente");
-			return false;
+			throw new RuntimeException("impossibile aggiornare un elemento non esistente");
 		}
 		map.replace(id, map.get(id), videogioco);
 		log.info("Videogioco con id "+id+" updated con "+videogioco);
-		return true;
 	}
 
 	@Override

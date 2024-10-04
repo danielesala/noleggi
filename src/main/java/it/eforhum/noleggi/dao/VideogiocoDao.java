@@ -7,9 +7,9 @@ import it.eforhum.noleggi.entity.Videogioco;
 
 public interface VideogiocoDao {
 	
-	boolean save(Videogioco newVideogioco);
+	void save(Videogioco newVideogioco);
 	
-	boolean update(int id,Videogioco videogioco);
+	void update(int id,Videogioco videogioco);
 	
 	boolean delete(Videogioco videogioco);
 	
