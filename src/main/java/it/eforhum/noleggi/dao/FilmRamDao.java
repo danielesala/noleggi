@@ -11,6 +11,14 @@ import it.eforhum.noleggi.entity.Film;
 public class FilmRamDao implements FilmDao {
 
 	Map<Integer,Film> films = new HashMap<>();
+	private static FilmRamDao INSTANCE=new FilmRamDao();
+	
+	private FilmRamDao() {
+		
+	}
+	public static FilmRamDao getInstance() {
+		return INSTANCE;
+	}
 	
 	@Override
 	public void save(Film film) {
