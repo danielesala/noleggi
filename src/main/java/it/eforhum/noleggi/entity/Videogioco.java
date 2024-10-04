@@ -7,9 +7,6 @@ import it.eforhum.noleggi.util.Sequences;
 
 public class Videogioco extends BaseEntity{
 	Console console;
-
-	
-	
 	public Videogioco(String codice, String titolo, LocalDate dataInizio, LocalDate dataFine) {
 		super(Sequences.getSeqGioco());
 		this.codice = codice;

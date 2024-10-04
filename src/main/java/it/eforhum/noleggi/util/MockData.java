@@ -1,10 +1,14 @@
 package it.eforhum.noleggi.util;
 
 import java.time.LocalDate;
+import java.util.HashMap;
+import java.util.Map;
 
 import it.eforhum.noleggi.entity.*;
 
 public class MockData {
+	private static Map<Integer, Videogioco> VIDEOGIOCHI = new HashMap<>();
+	private static Map<Integer, Film> FILMS = new HashMap<>();
 	static {
 		Film film1 = new Film();
 		film1.setCodice("xx-20");
@@ -82,6 +86,18 @@ public class MockData {
 		film11.setDataInizio(LocalDate.of(2021, 12, 5));
 		film11.setDataFine(LocalDate.of(2021, 12, 15));
 		film11.setGenere(Genere.FAMIGLIA);
+		
+		FILMS.put(film1.getId(), film1);
+		FILMS.put(film2.getId(), film2);
+		FILMS.put(film3.getId(), film3);
+		FILMS.put(film4.getId(), film4);
+		FILMS.put(film5.getId(), film5);
+		FILMS.put(film6.getId(), film6);
+		FILMS.put(film7.getId(), film7);
+		FILMS.put(film8.getId(), film8);
+		FILMS.put(film9.getId(), film9);
+		FILMS.put(film10.getId(), film10);
+		FILMS.put(film11.getId(), film11);
 
 		Videogioco videogioco1 = new Videogioco("xy-45", "minecraft", 
 				LocalDate.of(2015, 4, 9), LocalDate.of(2016, 5,22));
@@ -122,13 +138,24 @@ public class MockData {
 		Videogioco videogioco10 = new Videogioco("xy-54", "Final Fantasy VII Remake", 
 		                LocalDate.of(2020, 4, 10), LocalDate.of(2021, 3, 31));
 		videogioco10.setConsole(Console.PS4);	
+		
+		VIDEOGIOCHI.put(videogioco1.getId(), videogioco1);
+		VIDEOGIOCHI.put(videogioco2.getId(), videogioco2);
+		VIDEOGIOCHI.put(videogioco3.getId(), videogioco3);
+		VIDEOGIOCHI.put(videogioco4.getId(), videogioco4);
+		VIDEOGIOCHI.put(videogioco5.getId(), videogioco5);
+		VIDEOGIOCHI.put(videogioco6.getId(), videogioco6);
+		VIDEOGIOCHI.put(videogioco7.getId(), videogioco7);
+		VIDEOGIOCHI.put(videogioco8.getId(), videogioco8);
+		VIDEOGIOCHI.put(videogioco9.getId(), videogioco9);
+		VIDEOGIOCHI.put(videogioco10.getId(), videogioco10);
 	}
 	
-	public static void getFilms() {
-		
+	public static Map<Integer, Film> getFilms() {
+		return FILMS;
 	}
 	
-	public static void getVideogiochi() {
-		
+	public static Map<Integer, Videogioco> getVideogiochi() {
+		return VIDEOGIOCHI;
 	}
 }

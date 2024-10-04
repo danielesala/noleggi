@@ -10,12 +10,13 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import it.eforhum.noleggi.entity.Film;
+import it.eforhum.noleggi.util.MockData;
 
 public class FilmRamDao implements FilmDao {
 	Logger log=LogManager.getLogger(FilmRamDao.class);
 	
 	
-	Map<Integer,Film> films = new HashMap<>();
+	Map<Integer,Film> films = MockData.getFilms();//new HashMap<>();
 	private static FilmRamDao INSTANCE=new FilmRamDao();
 	
 	private FilmRamDao() {

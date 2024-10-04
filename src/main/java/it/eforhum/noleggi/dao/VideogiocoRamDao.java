@@ -9,11 +9,12 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import it.eforhum.noleggi.entity.Videogioco;
+import it.eforhum.noleggi.util.MockData;
 
 public class VideogiocoRamDao implements VideogiocoDao{
 	Logger log=LogManager.getLogger(FilmRamDao.class);
 	
-	Map<Integer, Videogioco> map=new HashMap<>();
+	Map<Integer, Videogioco> map= MockData.getVideogiochi();//new HashMap<>();
 	
 	private static VideogiocoRamDao INSTANCE = new VideogiocoRamDao();
 	
