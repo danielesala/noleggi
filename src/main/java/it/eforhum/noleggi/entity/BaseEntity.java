@@ -1,6 +1,7 @@
 package it.eforhum.noleggi.entity;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public abstract class BaseEntity {
 	
@@ -53,6 +54,24 @@ public abstract class BaseEntity {
 	public double getPrezzo() {
 		return 0;
 	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		BaseEntity other = (BaseEntity) obj;
+		return id == other.id;
+	}
+	
 }
 
 //ESERCITAZIONE IN AUTONOMIA/GRUPPO
