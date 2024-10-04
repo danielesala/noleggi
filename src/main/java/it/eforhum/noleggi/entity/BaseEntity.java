@@ -10,6 +10,46 @@ public abstract class BaseEntity {
 	protected LocalDate dataInizio;
 	protected LocalDate dataFine;
 	
+	public BaseEntity(int id) {
+		this.id = id;
+	}
+	
+	protected String getCodice() {
+		return codice;
+	}
+
+	protected void setCodice(String codice) {
+		this.codice = codice;
+	}
+
+	protected String getTitolo() {
+		return titolo;
+	}
+
+	protected void setTitolo(String titolo) {
+		this.titolo = titolo;
+	}
+
+	protected LocalDate getDataInizio() {
+		return dataInizio;
+	}
+
+	protected void setDataInizio(LocalDate dataInizio) {
+		this.dataInizio = dataInizio;
+	}
+
+	protected LocalDate getDataFine() {
+		return dataFine;
+	}
+
+	protected void setDataFine(LocalDate dataFine) {
+		this.dataFine = dataFine;
+	}
+
+	protected int getId() {
+		return id;
+	}
+	
 	public double getPrezzo() {
 		return 0;
 	}

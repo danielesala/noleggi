@@ -3,11 +3,15 @@ package it.eforhum.noleggi.entity;
 import java.time.LocalDate;
 import java.time.Period;
 
+import it.eforhum.noleggi.util.Sequences;
+
 public class Videogioco extends BaseEntity{
 	Console console;
 
-	public Videogioco(int id, String codice, String titolo, LocalDate dataInizio, LocalDate dataFine) {
-		this.id = id;
+	
+	
+	public Videogioco(String codice, String titolo, LocalDate dataInizio, LocalDate dataFine) {
+		super(Sequences.getSeqGioco());
 		this.codice = codice;
 		this.titolo = titolo;
 		this.dataInizio = dataInizio;
