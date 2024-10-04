@@ -14,39 +14,39 @@ public abstract class BaseEntity {
 		this.id = id;
 	}
 	
-	protected String getCodice() {
+	public String getCodice() {
 		return codice;
 	}
 
-	protected void setCodice(String codice) {
+	public void setCodice(String codice) {
 		this.codice = codice;
 	}
 
-	protected String getTitolo() {
+	public String getTitolo() {
 		return titolo;
 	}
 
-	protected void setTitolo(String titolo) {
+	public void setTitolo(String titolo) {
 		this.titolo = titolo;
 	}
 
-	protected LocalDate getDataInizio() {
+	public LocalDate getDataInizio() {
 		return dataInizio;
 	}
 
-	protected void setDataInizio(LocalDate dataInizio) {
+	public void setDataInizio(LocalDate dataInizio) {
 		this.dataInizio = dataInizio;
 	}
 
-	protected LocalDate getDataFine() {
+	public LocalDate getDataFine() {
 		return dataFine;
 	}
 
-	protected void setDataFine(LocalDate dataFine) {
+	public void setDataFine(LocalDate dataFine) {
 		this.dataFine = dataFine;
 	}
 
-	protected int getId() {
+	public int getId() {
 		return id;
 	}
 	

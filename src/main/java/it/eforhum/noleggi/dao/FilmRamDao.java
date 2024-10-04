@@ -11,15 +11,16 @@ public class FilmRamDao implements FilmDao {
 	Map<Integer,Film> films = new HashMap<>();
 	
 	@Override
-	public boolean save(Film film) {
-		films.put(null, film)
-		return false;
+	public void save(Film film) {
+		if(films.get(film.getId())!=null) {
+			throw new RuntimeException("noleggio già presente");
+		}
+		films.put(film.getId(),film);
 	}
 
 	@Override
 	public Film findById(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		
 	}
 
 	@Override

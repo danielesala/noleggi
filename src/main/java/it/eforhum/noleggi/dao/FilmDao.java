@@ -6,9 +6,9 @@ import it.eforhum.noleggi.entity.Film;
 
 public interface FilmDao {
 	
-	boolean save(Film film);
+	void save(Film film);
 	
-	Film findById(int id);
+	Optional<> findById(int id);
 	
 	List<Film> findAll();
 	
