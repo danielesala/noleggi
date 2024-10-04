@@ -50,10 +50,6 @@ public abstract class BaseEntity {
 	public int getId() {
 		return id;
 	}
-	
-	public double getPrezzo() {
-		return 0;
-	}
 
 	@Override
 	public int hashCode() {

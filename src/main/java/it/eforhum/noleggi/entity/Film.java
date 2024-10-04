@@ -19,11 +19,5 @@ public class Film extends BaseEntity{
 	public void setGenere(Genere genere) {
 		this.genere = genere;
 	}
-
-	@Override
-	public double getPrezzo() {
-		long giorni = super.dataFine.toEpochDay() - super.dataInizio.toEpochDay();
-		return 2.5 * giorni;
-	}
 	
 }

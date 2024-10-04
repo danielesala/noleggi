@@ -25,11 +25,4 @@ public class Videogioco extends BaseEntity{
 	public void setConsole(Console console) {
 		this.console = console;
 	}
-
-	@Override
-	public double getPrezzo() {
-		long period=super.dataFine.toEpochDay()-super.dataInizio.toEpochDay();
-		return 1*(period);
-	}
-	
 }

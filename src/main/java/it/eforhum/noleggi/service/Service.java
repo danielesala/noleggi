@@ -8,6 +8,6 @@ public interface Service {
 	
 	void elimina(BaseEntity b);
 	
-	void calcolaPrezzo(BaseEntity b);
+	double calcolaPrezzo(BaseEntity b);
 	
 }
