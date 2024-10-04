@@ -10,6 +10,16 @@ import it.eforhum.noleggi.entity.Videogioco;
 public class VideogiocoRamDao implements VideogiocoDao{
 	Map<Integer, Videogioco> map=new HashMap<>();
 	
+	private static VideogiocoRamDao INSTANCE = new VideogiocoRamDao();
+	
+	private VideogiocoRamDao() {
+		
+	}
+	
+	public static VideogiocoRamDao getInstance() {
+		return INSTANCE;
+	}
+	
 	@Override
 	public boolean save(Videogioco newVideogioco) {
 		if(map.containsValue(newVideogioco)) {

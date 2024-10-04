@@ -14,7 +14,7 @@ public class FilmRamDao implements FilmDao {
 	
 	@Override
 	public void save(Film film) {
-		if(films.get(film.getId())!=null) {
+		if(films.containsKey(film.getId())) {
 			throw new RuntimeException("noleggio già presente");
 		}
 		films.put(film.getId(),film);
